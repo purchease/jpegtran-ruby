@@ -1,4 +1,8 @@
-### 0.3.0 (2016-02-20)
+### 0.3.1 (2016-02-19)
+
+* fix gem loading
+
+### 0.3.0 (2016-02-19)
 
 * simplified the code and got rid of runtime dependencies
 * new gem name
