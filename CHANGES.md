@@ -2,6 +2,7 @@
 
 * simplified the code and got rid of runtime dependencies
 * new gem name
+* specs
 
 ### 0.1.4 (2015-08-15)
 
