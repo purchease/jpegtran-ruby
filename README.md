@@ -1,34 +1,47 @@
-Jpegtran
-========
+## Jpegtran
 
-**Jpegtran** provides Ruby interface to the [`jpegtran`][1] tool. 
-Some examples follow: (for details, see module documentation)
+Provides Ruby interface to the [jpegtran](http://linux.die.net/man/1/jpegtran) tool.
+
+### Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'jpegtran-ruby'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jpegtran-ruby
+
+### Usage
 
 ```ruby
 require "jpegtran"
 
-Jpegtran.available?    # will return true (or false)
+Jpegtran.configured? # will return true (or false)
 
-options = { :progressive => true, :optimize => true }
+options = { progressive: true, optimize: true }
 Jpegtran.optimize("foo.jpg", options)
 
 # will run 'jpegtran -progressive -optimize -outfile foo.jpg foo.jpg'
 ```
 
-It can be also run asynchronously by non-blocking way (with [`eventmachine`][4]) 
-simply by giving block to `#optimize`. See documentation. 
-    
-### Unsupported Options
+Configuration:
+
+```ruby
+Jpegtran.configure do |config|
+  config.executable = "/usr/local/bin/jpegtran"
+end
+```
 
 The `-maxmemory N` option isn't supported.
 
-Copyright
----------
+### Copyright
 
-Copyright &copy; 2011 &ndash; 2015 [Martin Poljak][3]. See `LICENSE.txt` for
-further details.
-
-[1]: http://linux.die.net/man/1/jpegtran
-[2]: http://github.com/martinkozak/jpegtran/issues
-[3]: http://www.martinpoljak.net/
-[4]: http://rubyeventmachine.com/
+Copyright &copy; 2011 &ndash; 2016 [Martin Poljak](http://www.martinpoljak.net).
+See `LICENSE.txt` for further details.
