@@ -2,7 +2,7 @@
 
 Provides Ruby interface to the [jpegtran](http://linux.die.net/man/1/jpegtran) tool.
 
-![Travis CI](https://travis-ci.org/dimko/jpegtran-ruby.svg)
+[![Travis CI](https://travis-ci.org/dimko/jpegtran-ruby.svg)](https://travis-ci.org/dimko/jpegtran-ruby)
 
 ### Installation
 
