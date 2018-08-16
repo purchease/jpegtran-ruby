@@ -45,12 +45,12 @@ module Jpegtran
       end
     end
 
-    # Fixnum arguments
+    # Integer arguments
     [ :rotate, :restart ].each do |arg|
-      if Fixnum === options[arg]
+      if Integer === options[arg]
         cmd << "-#{arg} #{options[arg]}"
       elsif options.include?(arg)
-        raise Error.new("Invalid value for :#{arg} option. Fixnum expected.")
+        raise Error.new("Invalid value for :#{arg} option. Integer expected.")
       end
     end
 
